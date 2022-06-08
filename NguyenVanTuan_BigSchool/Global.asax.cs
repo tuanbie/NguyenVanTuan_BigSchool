@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Http;
+
 
 namespace NguyenVanTuan_BigSchool
 {
@@ -15,7 +17,7 @@ namespace NguyenVanTuan_BigSchool
         protected void Application_Start()
         {
             Database.SetInitializer<ApplicationDbContext>(null);
-
+            GlobalConfiguration.Configure(WebApiConfig2.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
