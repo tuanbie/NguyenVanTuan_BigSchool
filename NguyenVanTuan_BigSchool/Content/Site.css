@@ -39,11 +39,12 @@ textarea {
 
 .course {
     list-style: none;
+    margin-bottom:10px;
 }
 
     .course > li {
         position: relative;
-        margin-bottom: 30px;
+        margin-top: 30px;
     }
 
         .course > li .date {
@@ -70,8 +71,15 @@ textarea {
             display: none;
             left: 70px;
             position: absolute;
+            margin-left: 2px;
+            
         }
-
-        .course > li:hover .action {
-            display: block;
-        }
+            .course > li .action a {
+                background-color: #fffac5;
+                padding: 5px;
+                border-radius: 3px;
+                transition: 0.5s ease all;
+            }
+            .course > li:hover .action  {
+                display: block;
+            }
